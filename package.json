@@ -5,6 +5,9 @@
   "repository": "git@github.com:benweizhu/react-heatmap.git",
   "author": "benweizhu <benweizhu@gmail.com>",
   "license": "MIT",
+  "scripts": {
+    "build": "webpack -p"
+  },
   "devDependencies": {
     "babel-core": "^6.24.1",
     "babel-loader": "^6.4.1",
