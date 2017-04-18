@@ -1,5 +1,5 @@
 {
-  "name": "react-heatmap",
+  "name": "react-heatmap.js",
   "version": "1.0.0",
   "main": "lib/ReactHeatmap.min.js",
   "repository": "git@github.com:benweizhu/react-heatmap.git",
