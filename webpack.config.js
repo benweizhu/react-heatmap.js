@@ -25,7 +25,9 @@ module.exports = {
     umdNamedDefine: true
   },
   externals: {
-    react: 'react'
+    react: 'react',
+    'react-dom': 'react-dom',
+    'heatmap.js': 'heatmap.js'
   },
   module: {
     rules: [

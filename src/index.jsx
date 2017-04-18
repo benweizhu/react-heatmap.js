@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Heatmap from 'heatmap.js'
+import Heatmap from 'heatmap.js';
 
 class ReactHeatmap extends React.Component {
   constructor(props) {
