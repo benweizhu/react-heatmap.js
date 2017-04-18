@@ -14,8 +14,8 @@ class ReactHeatmap extends React.Component {
     this.setData(this.props.min, this.props.max, this.props.data);
   }
 
-  componentWillReceiveProps(newProps) {
-    this.setData(newProps.max, newProps.data);
+  componentWillReceiveProps(nextProps) {
+    this.setData(nextProps.min, nextProps.max, nextProps.data);
   }
 
   setData = (min, max, data) => {
