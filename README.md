@@ -9,33 +9,39 @@ import React from 'react';
 import ReactDom from 'react-dom';
 import ReactHeatmap from 'react-heatmap';
 
-class ReactHeatmapExample extends React.Component {
+class ReactHeatmapExample extends React.PureComponent {
   render() {
-    var points = [];
-    var max = 0;
-    var width = 840;
-    var height = 400;
-    var len = 300;
+    const config = {
+      radius: 10,
+      maxOpacity: 0.5,
+      minOpacity: 0,
+      blur: 0.75
+    };
+    const points = [];
+    const width = 840;
+    const height = 400;
+    let max = 0;
+    let len = 300;
 
     while (len--) {
-      var val = Math.floor(Math.random() * 100);
+      const val = Math.floor(Math.random() * 100);
       // now also with custom radius
-      var radius = Math.floor(Math.random() * 70);
+      const radius = Math.floor(Math.random() * 70);
 
       max = Math.max(max, val);
-      var point = {
+      const point = {
         x: Math.floor(Math.random() * width),
         y: Math.floor(Math.random() * height),
         value: val,
         // radius configuration on point basis
-        radius: radius
+        radius
       };
       points.push(point);
     }
 
     return (
       <div style={{ width: '840px', height: '400px' }}>
-        < ReactHeatmap max= { max } data= { points } unit= "notPercent" />
+        <ReactHeatmap configObject={config} max={max} data={points} />
       </div >
     );
   }
@@ -44,3 +50,6 @@ class ReactHeatmapExample extends React.Component {
 ReactDom.render(<ReactHeatmapExample />, document.querySelector('#app'));
 
 ```
+For more configuration, take [docs.html][747485cf] as reference.
+
+  [747485cf]: https://www.patrick-wied.at/static/heatmapjs/docs.html "docs.html"
