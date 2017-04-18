@@ -1,13 +1,17 @@
-# react-heatmap
+# react-heatmap.js
 
 A React Component based on [heatmap.js][b7fa289f].
 
   [b7fa289f]: https://www.patrick-wied.at/static/heatmapjs/ "heatmap.js"
 
+```
+yarn add react-heatmap.js
+```
+
 ```javascript
 import React from 'react';
 import ReactDom from 'react-dom';
-import ReactHeatmap from 'react-heatmap';
+import ReactHeatmap from 'react-heatmap.js';
 
 class ReactHeatmapExample extends React.PureComponent {
   render() {
