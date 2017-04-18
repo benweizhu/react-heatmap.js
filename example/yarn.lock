@@ -2645,10 +2645,12 @@ react-dom@^15.5.4:
 
 "react-heatmap@https://github.com/benweizhu/react-heatmap.git":
   version "1.0.0"
-  resolved "https://github.com/benweizhu/react-heatmap.git#0ce333cb85839ee514d3ac459e7f470627bd44ff"
+  resolved "https://github.com/benweizhu/react-heatmap.git#e0caa82f6604884820185f577fef1cc5cfc2cfea"
   dependencies:
     heatmap.js "^2.0.5"
-    prop-types "^15.5.7"
+    prop-types "^15.5.8"
+    react "^15.5.4"
+    react-dom "^15.5.4"
 
 react@^15.5.4:
   version "15.5.4"
