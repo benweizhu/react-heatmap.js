@@ -23,6 +23,6 @@
     "prop-types": "^15.5.8",
     "react": "^15.5.4",
     "react-dom": "^15.5.4",
-    "react-heatmap": "git+https://github.com/benweizhu/react-heatmap.js.git"
+    "react-heatmap.js": "^1.0.0"
   }
 }

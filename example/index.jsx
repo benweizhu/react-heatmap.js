@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDom from 'react-dom';
-import ReactHeatmap from 'react-heatmap';
+import ReactHeatmap from 'react-heatmap.js';
 
 class ReactHeatmapExample extends React.PureComponent {
   render() {

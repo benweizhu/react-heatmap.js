@@ -2643,9 +2643,9 @@ react-dom@^15.5.4:
     object-assign "^4.1.0"
     prop-types "~15.5.7"
 
-"react-heatmap@git+https://github.com/benweizhu/react-heatmap.js.git":
+react-heatmap.js@^1.0.0:
   version "1.0.0"
-  resolved "git+https://github.com/benweizhu/react-heatmap.js.git#8914ceb16afdee3aed4fa75c2975338d8676c956"
+  resolved "https://registry.yarnpkg.com/react-heatmap.js/-/react-heatmap.js-1.0.0.tgz#d40a93eebaf4c821037a8ac078477fa9f905ad0e"
   dependencies:
     heatmap.js "^2.0.5"
     prop-types "^15.5.8"
