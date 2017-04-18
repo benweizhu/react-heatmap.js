@@ -32,9 +32,8 @@
   },
   "dependencies": {
     "heatmap.js": "^2.0.5",
-    "prop-types": "^15.5.7"
-  },
-  "peerDependencies": {
-    "react": "^15.5.0"
+    "prop-types": "^15.5.7",
+    "react": "^15.5.0",
+    "react-dom": "^15.5.4"
   }
 }
