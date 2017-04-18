@@ -3,63 +3,44 @@ import ReactDOM from 'react-dom';
 import Heatmap from 'heatmap.js';
 
 class ReactHeatmap extends React.Component {
-  constructor(props) {
-    super(props);
-    this.setData = this.setData.bind(this);
-  }
 
   componentDidMount() {
-    this.heatmap = Heatmap.create({
+    const configObject = Object.assign({
       container: ReactDOM.findDOMNode(this)
-    });
-    this.setData(this.props.max, this.props.data);
+    }, this.props.configObject);
+
+    this.heatmap = Heatmap.create(configObject);
+
+    this.setData(this.props.min, this.props.max, this.props.data);
   }
 
   componentWillReceiveProps(newProps) {
     this.setData(newProps.max, newProps.data);
   }
 
-  setData(max, data) {
-    this.heatmap.setData({
-      max: max,
-      data: this.computeData(data)
-    });
-  }
-
-  computeData(data) {
-    if (this.props.unit === 'percent') {
-      let container = {};
-      container.width = ReactDOM.findDOMNode(this).offsetWidth;
-      container.height = ReactDOM.findDOMNode(this).offsetHeight;
-      return data.map(function (values, index) {
-        return {
-          x: values.x / 100 * container.width,
-          y: values.y / 100 * container.height,
-          value: values.value
-        }
-      })
-    } else {
-      return data;
-    }
+  setData = (min, max, data) => {
+    this.heatmap.setData({ min, max, data });
   }
 
   render() {
     return (
-      <div style={{ width: '100%', height: '100%' }}></div>
+      <div style={{ width: '100%', height: '100%' }} />
     );
   }
 }
 
 ReactHeatmap.propTypes = {
   max: React.PropTypes.number,
-  data: React.PropTypes.array,
-  unit: React.PropTypes.string
-}
+  min: React.PropTypes.number,
+  data: React.PropTypes.arrayOf(React.PropTypes.object),
+  configObject: React.PropTypes.object
+};
 
 ReactHeatmap.defaultProps = {
   max: 5,
+  min: 0,
   data: [],
-  unit: 'percent'
-}
+  configObject: {}
+};
 
 export default ReactHeatmap;
